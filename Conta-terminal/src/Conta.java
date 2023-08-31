@@ -1,24 +1,20 @@
 import java.util.Scanner;
 public class Conta {
-    int numero, senha;
-    String nome, agencia;
-    double saldo = 100;
+    int numero;
+    String nomeCliente, agencia;
+    double saldo;
     Scanner scanner = new Scanner(System.in);
 
     public void criar(){
-        System.out.println("digite seu nome: ");
-        nome = scanner.next();
-        System.out.println("Digite o numero da conta:");
+        System.out.println("Por favor, digite seu nome! ");
+        nomeCliente = scanner.next();
+        System.out.println("Por favor, digite o numero da conta! ");
         numero = scanner.nextInt();
-        System.out.println("Digite o numero da agência: ");
+        System.out.println("Por favor, digite o numero da agência! ");
         agencia = scanner.next();
-        System.out.println("Crie uma senha : ");
-        senha = scanner.nextInt();
-        System.out.println("Conta criada com sucesso! ");
+        System.out.println("por favor, digite o valor do seu saldo! ");
+        saldo = scanner.nextFloat();
+        System.out.println("Olá, "+ nomeCliente + ", obrigado por criar uma conta no nosso banco sua agencia é, " + agencia+ ", conta "+ numero + " e seu saldo R$" + saldo +" já esta disponivel para saque.");
 
-    }
-    public void consultarExtrato(){
-        System.out.println("Nome : "+ nome + " Numero: " + numero+ " Agência: "+ agencia);
-        System.out.println("Saldo :"+saldo);
     }
 }
